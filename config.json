@@ -1,0 +1,39 @@
+{
+"logging_file_name":null,
+"encoder":{
+      "rnn_size": 1024,
+      "rnn_num_layer": 2,
+      "bidirectional": true
+},
+"decoder":{
+      "rnn_size": 800,
+      "rnn_num_layer": 2,
+      "attn_type": "last",
+      "layer_normed": false,
+      "additional_rnn_size":512,
+      "mlp_size":512,
+      "z_size":300,
+      "dropout":0.3
+},
+"common":{
+      "num_word": null,
+      "sample_number":1,
+      "emb_size": 300,
+      "context_size": 512,
+      "beam_size":3
+},
+"interval":{
+       "report": 1000,
+       "evaluation": 6000,
+       "save" : 6000,
+       "generation" : 6000
+},
+"learning":{
+        "parent_name": "restore",
+        "batch_size":40,
+        "lr":1e-4,
+        "clip_norm":2,
+        "num_epoch":200,
+        "cuda":3
+}
+}
